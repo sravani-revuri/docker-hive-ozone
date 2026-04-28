@@ -9,6 +9,10 @@ bash-5.1$ ozone sh volume create vol1
 bash-5.1$ ozone sh bucket create vol1/bucket1
 ```
 
+
+## Do either one of Part-A or Part-B
+
+# PART-A
 ## Hive container setup
 
 cd to docker/hive-ozone if not in it already.
@@ -34,6 +38,16 @@ docker exec -it <container-name> /opt/hive/bin/beeline -u 'jdbc:hive2://127.0.0.
 
 ```
 docker exec -it dreamy_lehmann /opt/hive/bin/beeline -u 'jdbc:hive2://127.0.0.1:10000/' -n hive -p hive
+```
+
+# PART-B
+### OR INSTEAD OF BUILD:
+```
+cd docker/hive-ozone/                                                
+docker compose up --build
+```
+```
+docker compose exec hiveserver2 /opt/hive/bin/beeline -u 'jdbc:hive2://127.0.0.1:10000/' -n hive -p hive
 ```
 
 ## Check if everything is working:
@@ -82,18 +96,3 @@ INSERT INTO t1 VALUES (1, 'hello');
 SELECT * FROM t1;
 SHOW CREATE TABLE t1;
 ```
-
-
-
-
-### OR INSTEAD OF BUILD:
-```
-cd docker/hive-ozone/                                                
-docker compose up --build
-```
-```
-docker compose exec hiveserver2 /opt/hive/bin/beeline -u 'jdbc:hive2://127.0.0.1:10000/' -n hive -p hive
-```
-
-
-everything else is same.
