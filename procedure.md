@@ -11,11 +11,11 @@ bash-5.1$ ozone sh bucket create vol1/bucket1
 
 ## Hive container setup
 
-cd to docker-hive-ozone if not in it already.
+cd to docker/hive-ozone if not in it already.
 docker build -f <path to docker file> -t my-hive-ozone:4.0.0 .
 ### build 
 ```
-docker build -f docker-hive-ozone/Dockerfile -t my-hive-ozone:4.0.0 .
+docker build -f docker/hive-ozone/Dockerfile -t my-hive-ozone:4.0.0 .
 ```
 ### run
 ```

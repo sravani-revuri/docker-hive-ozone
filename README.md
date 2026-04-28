@@ -1,6 +1,8 @@
 # docker-hive-ozone
 steps for connecting hive to ozone.
 
+CLONE THIS REPO IN OZONE REPO . IN FOLDER CALLED DOCKER/HIVE-OZONE. move all the files out of this repo into the parent hive-ozone folder. or modify commands to handle the structure change.
+
 read procedure.md
 
 important sites:
