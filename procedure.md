@@ -82,3 +82,18 @@ INSERT INTO t1 VALUES (1, 'hello');
 SELECT * FROM t1;
 SHOW CREATE TABLE t1;
 ```
+
+
+
+
+### OR INSTEAD OF BUILD:
+```
+cd docker/hive-ozone/                                                
+docker compose up --build
+```
+```
+docker compose exec hiveserver2 /opt/hive/bin/beeline -u 'jdbc:hive2://127.0.0.1:10000/' -n hive -p hive
+```
+
+
+everything else is same.
