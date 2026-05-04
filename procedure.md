@@ -1,5 +1,12 @@
 ## Ozone set up
-start ozone form compose directory and keep it running.
+add these properties to ozone repo docker-config
+
+```
+OZONE-SITE.XML_ozone.replication=1
+OZONE-SITE.XML_ozone.replication.type=RATIS
+```
+
+build and start ozone form compose directory and keep it running.
 
 create vol1 and bucket1
 
